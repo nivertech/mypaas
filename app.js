@@ -9,7 +9,7 @@ http.createServer(function(req, res) {
         return res.end('OK');
     }
 
-    console.log('request!');
+    console.log('request!', req.url);
     res.end('hello, node!\n');
 }).listen(process.env.port || 5000);
 
