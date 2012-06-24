@@ -6,7 +6,9 @@
     "type": "git",
     "url": "git://github.com/eladb/mypaas.git"
   },
-  "dependencies": {},
+  "dependencies": {
+      "asciimo": "0.3.1"
+  },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {

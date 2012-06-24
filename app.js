@@ -1,4 +1,5 @@
 var http = require('http');
+var asciimo = require('asciimo').Figlet;
 
 http.createServer(function(req, res) {
     if (req.url === '/boogoofoo' && req.method === 'POST') {
@@ -10,7 +11,9 @@ http.createServer(function(req, res) {
     }
 
     console.log('request!', req.url);
-    res.end('hello, node!\n');
+    return asciimo.write('Damn!', 'Banner', function(art) {
+        return res.end(art);
+    });
 }).listen(process.env.port || 5000);
 
 console.log('server started on port', process.env.port || 5000);
